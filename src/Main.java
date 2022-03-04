@@ -122,7 +122,16 @@ public class Main
 
                 //Write out storage
                 case 6:
-                    System.out.println("Among Us");
+                    if (hasReadFile)
+                    {
+                        strTemp = FileIO.User.strInput(u_input, "File: ");
+                        FileIO.FileWrite.writeStorage(storeArea, strTemp);
+                        System.out.println("Storage size and inventory successfully saved to " + strTemp);
+                    }
+                    else
+                    {
+                        System.out.println("Please use select a file first.");
+                    }
                     break;
 
                 case 0:

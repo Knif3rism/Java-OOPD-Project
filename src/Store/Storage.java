@@ -29,14 +29,25 @@ public class Storage
         inventory = new ArrayList<Food>();
     }
 
+    public String getName()
+    {
+        return name;
+    }
+
+    public int getMaxCapacity()
+    {
+        return maxCapacity;
+    }
+
+
     public int getCurrCapacity()
     {
         return currCapacity;
     }
 
-    public String getName()
+    public List<Food> getInventory()
     {
-        return name;
+        return inventory;
     }
 
     public int addFood(Food inFood)
